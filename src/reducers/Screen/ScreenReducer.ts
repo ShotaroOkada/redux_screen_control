@@ -20,7 +20,6 @@ const screenReducer = (state: IScreenState = initialState, action: ScreenAction)
         };
         default:
         return initialState;
-        
     }
 };
 
