@@ -1,6 +1,6 @@
 enum ScreenActiontype{
     HOME_SCREEN = "HOME_SCREEN",
-    MENU_SCREEN = "MENUSCREEN"
+    MENU_SCREEN = "MENU_SCREEN"
 }
 
 export default ScreenActiontype;

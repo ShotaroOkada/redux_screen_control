@@ -7,6 +7,7 @@ const initialState: IScreenState = {
 }
 
 const screenReducer = (state: IScreenState = initialState, action: ScreenAction): IScreenState => {
+    // alert("initialstateは" + state.screenType)
     switch(action.type){
         case ScreenActiontype.HOME_SCREEN:
         return{
@@ -16,7 +17,7 @@ const screenReducer = (state: IScreenState = initialState, action: ScreenAction)
         case ScreenActiontype.MENU_SCREEN:
         return{
             ...state,
-            screenType: ScreenType.MENU_SCREEN
+            screenType: ScreenType.HOME_SCREEN
         };
         default:
         return initialState;

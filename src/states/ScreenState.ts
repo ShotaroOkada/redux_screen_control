@@ -1,6 +1,6 @@
 export enum ScreenType{
     HOME_SCREEN = "HOME_SCREEN",
-    MENU_SCREEN = "MENUSCREEN"
+    MENU_SCREEN = "MENU_SCREEN"
 }
 
 export interface IScreenState{

@@ -1,19 +1,24 @@
 import * as React from 'react';
-import './App.css';
+import HomeScreen from './containers/HomeScreen/HomeScreen';
+import MenuScreen from './containers/MenuScreen/MenuScreen';
+import { IScreenState,  ScreenType  } from './states/ScreenState';
 
-import logo from './logo.svg';
+export interface IAppConnectedProps{
+  screenState: IScreenState 
+}
 
-class App extends React.Component {
+class App extends React.Component<IAppConnectedProps> {
   public render() {
+    const { screenState } = this.props;
+    alert(screenState.screenType);
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+      <div>
+       {screenState.screenType === ScreenType.HOME_SCREEN || screenState.screenType === undefined  &&
+        <HomeScreen />}
+       {screenState.screenType === ScreenType.MENU_SCREEN &&
+        <MenuScreen />}
+        {/* <MenuScreen />
+        <HomeScreen /> */}
       </div>
     );
   }

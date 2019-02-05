@@ -1,5 +1,5 @@
 export interface IHomeScreenProps{
-    Home_to_Menu: () => void;
+    homeToMenu: () => void;
 }
 
 type HomeScreenProps = IHomeScreenProps;

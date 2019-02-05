@@ -14,9 +14,9 @@ export default class HomeScreen extends React.Component<HomeScreenProps>{
     }
 
     private handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        const {Home_to_Menu} = this.props;
+        const {homeToMenu} = this.props;
         e.preventDefault();
-        Home_to_Menu();
+        homeToMenu();
     }
 
 }
